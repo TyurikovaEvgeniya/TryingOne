@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import  java.util.Date;
 
 import static java.lang.System.out;
 
@@ -7,6 +8,8 @@ import static java.lang.System.out;
  */
 class Task3 {
     public static void main(String[] args) {
+        long DTBegin = Report.DateTime();
+        long DTEnd;
         int Aim = 13195; // Значение для проверки алгоритма = 13195; Целевое значение = 600851475143;
         ArrayList D = new ArrayList(Aim);
         Dividers.List(Aim , D);
@@ -14,6 +17,8 @@ class Task3 {
         Array.Print(D);
         out.println();
         Dividers.MaxSimple(D);
+        DTEnd = Report.DateTime();
+        Report.DateTimeWork(DTBegin, DTEnd);
 
     }
 }
