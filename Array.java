@@ -13,7 +13,7 @@ public class Array {
         out.println();
     }
     static void AddNaturalNumbersToArray(ArrayList Source, long n) {
-        for (int i = 2; i <= n; i++) { //Заполнение массива чмислами от двух до n;
+        for (int i = 2; i <= n; i++) { //Заполнение массива числами от двух до n;
             Source.add(i-2,i);
         }
     }

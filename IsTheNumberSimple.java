@@ -5,8 +5,8 @@ import java.util.ArrayList;
  * Created by Евгения on 05.02.2017.
  */
 public class IsTheNumberSimple { /** Проверка является ли число простым*/
-static Boolean isPrime(long num){
-    Boolean result = false;
+     static Boolean isPrime(long num){
+        Boolean result = false;
 
     if (num <= 1)
         result = false;
@@ -26,7 +26,7 @@ static Boolean isPrime(long num){
         }
     }
     return result;
-}
+    }
 
     static Boolean isPrime(BigInteger num) {
 
@@ -40,17 +40,17 @@ static Boolean isPrime(long num){
         if (num == bi2 | num == bi3) result = true;
 
         else {
-            if (num.isProbablePrime(2) == true) {
+                if (num.isProbablePrime(2) == true) {
 //                    System.out.println("Возможно простое");
-                for (count = bi2; count.compareTo(num.divide(bi2)) < 0; count = count.add(BigInteger.ONE)) {
-                    //System.out.println("Делитель "+count);
-                    if (num.divide(count).compareTo(nill) == 0) {
-                        result = false;
-                        break;
-                    } else
-                        result = true;
+                    for (count = bi2; count.compareTo(num.divide(bi2)) < 0; count = count.add(BigInteger.ONE)) {
+                        //System.out.println("Делитель "+count);
+                        if (num.divide(count).compareTo(nill) == 0) {
+                            result = false;
+                            break;
+                        } else
+                            result = true;
+                    }
                 }
-            }
 
         }
         return result;
@@ -59,11 +59,11 @@ static Boolean isPrime(long num){
     static void SimpleArray(ArrayList SourceToDelete, long n) {
         int i=0;
         Array.AddNaturalNumbersToArray(SourceToDelete, n);
-        while (i < SourceToDelete.size()){
-            if (IsTheNumberSimple.isPrime((Integer) SourceToDelete.get(i))== false) {
-                SourceToDelete.remove(i);
+          while (i < SourceToDelete.size()){
+              if (IsTheNumberSimple.isPrime((Integer) SourceToDelete.get(i))== false) {
+                    SourceToDelete.remove(i);
+                }
+              else i++;
             }
-            else i++;
-        }
     }
 }
